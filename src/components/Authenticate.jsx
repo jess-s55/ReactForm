@@ -26,7 +26,7 @@ export default function Authenticate({ token }) {
       <h2>Authenticate</h2>
       {successMessage && <p>{successMessage}</p>}
       {error && <p>{error}</p>}
-      <button onClick={handleclick}>Authenticate Token</button>;
+      <button className="authenticateButton" onClick={handleclick}>Authenticate Token</button>
     </>
   );
 }

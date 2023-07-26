@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 80%; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -39,4 +39,27 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.authenticateButton {
+  background-color: rgb(0, 8, 255);
+}
+
+.submitButton {
+  background-color: rgb(210, 49, 76);
+}
+
+h2 {
+  font-size: 45px;
+}
+
+input {
+  width: 80%;
+}
+
+form {
+  width: 100%;
+}
+.mainDiv {
+  width: 100%;
 }

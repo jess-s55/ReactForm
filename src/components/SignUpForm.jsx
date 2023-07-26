@@ -7,6 +7,24 @@ export default function SignUpForm({ setToken }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    // if (username.length < 6 && password.length < 8) {
+    //     setError("Username and password are too short");
+    // } else {
+    //     setUsername(''); 
+    //     setPassword('');
+    // }
+    if (password.length < 8) {
+        setError("Password must be at least 8 characters");
+    } else {
+        setUsername(''); 
+        setPassword('');
+    }
+    if (username.length < 6) {
+        setError("Username must be at least 6 characters");
+    } else {
+        setUsername(''); 
+        setPassword('');
+    }
     console.log("hello");
     try {
       const response = await fetch(
@@ -39,6 +57,7 @@ export default function SignUpForm({ setToken }) {
             onChange={(e) => setUsername(e.target.value)}
           />
         </label>
+        <br></br>
         <label>
           Password:{""}
           <input
@@ -46,7 +65,9 @@ export default function SignUpForm({ setToken }) {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <button>Submit</button>
+        <br></br>
+        <br></br>
+        <button className="submitButton">Submit</button>
       </form>
     </div>
   );
